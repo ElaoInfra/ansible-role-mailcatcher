@@ -1,0 +1,6 @@
+---
+
+- name: mailcatcher restart
+  service:
+    name:  mailcatcher
+    state: restarted

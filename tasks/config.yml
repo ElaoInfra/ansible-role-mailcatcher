@@ -1,0 +1,6 @@
+- name: config > Config
+  template:
+    src:  "{{ elao_mailcatcher_config_template }}"
+    dest: "{{ elao_mailcatcher_config_file }}"
+  notify:
+    - mailcatcher restart
