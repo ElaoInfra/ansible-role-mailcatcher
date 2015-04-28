@@ -2,11 +2,12 @@
 
 - name: install > Packages dependencies
   apt:
-    name:  "{{ item }}"
+    name: "{{ item }}"
     state: present
   with_items:
     - ruby-dev
     - libsqlite3-dev
+    - g++
 
 - name: install > Gem i18n dependency
   gem:
@@ -17,8 +18,6 @@
 
 - name: install > Package
   gem:
-    name: "{{ item }}"
+    name: mailcatcher
     state: present
     user_install: no
-  with_items:
-    - mailcatcher
