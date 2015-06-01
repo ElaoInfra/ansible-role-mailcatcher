@@ -1,10 +1,10 @@
+{%- import '_macros.j2' as macros with context -%}
+
+{% set config = elao_mailcatcher_config -%}
+
 # Defaults for mailcatcher initscript
 # sourced by /etc/init.d/mailcatcher
 # installed at /etc/default/mailcatcher by the maintainer scripts
 
 # Additional options that are passed to the Daemon.
-DAEMON_OPTS="
-{% for key, value in elao_mailcatcher_config.iteritems() -%}
-             --{{ key }}={{ value }}{{ '"' if loop.last else ' \\' }}
-{% endfor %}
-
+DAEMON_OPTS="{{ macros.config(config) }}"

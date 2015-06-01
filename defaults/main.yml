@@ -1,6 +1,6 @@
 ---
 
-elao_mailcatcher_config:
-  'http-ip': 0.0.0.0
-elao_mailcatcher_config_template: config/default.j2
+# Config
 elao_mailcatcher_config_file: /etc/default/mailcatcher
+elao_mailcatcher_config_template: config/empty.j2
+elao_mailcatcher_config: []

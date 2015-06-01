@@ -1,4 +1,4 @@
-- name: config > Config
+- name: config > Template
   template:
     src:  "{{ elao_mailcatcher_config_template }}"
     dest: "{{ elao_mailcatcher_config_file }}"
