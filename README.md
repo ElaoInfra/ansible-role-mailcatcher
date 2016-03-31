@@ -45,10 +45,10 @@ dependencies:
 
 ```yaml
 elao_mailcatcher_config:
-  'http-ip':    0.0.0.0
-  'http-port':  27015
-  'smtp-ip':    127.0.0.1
-  'smtp-port':  1025
+  - http-ip:    0.0.0.0
+  - http-port:  27015
+  - smtp-ip:    127.0.0.1
+  - smtp-port:  1025
 ```
 
 ## Example playbook
